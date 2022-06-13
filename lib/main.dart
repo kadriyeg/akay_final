@@ -1,6 +1,6 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/constants.dart';
 
 void main() {
   runApp( MyApp());
@@ -32,7 +32,7 @@ class _MyAppState extends State<MyApp> {
           Container(
             width: double.infinity,
             height: double.infinity,
-            color: Colors.amber,
+            color: backGroundColor,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start, 
@@ -87,6 +87,7 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
+
 
 class SecondPage extends StatelessWidget {
   @override
