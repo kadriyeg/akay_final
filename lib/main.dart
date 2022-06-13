@@ -25,7 +25,7 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: backGroundColor,
-
+          elevation: 0,
          //title: const Text('App Title'),
         ),
         body:  Center(
@@ -41,8 +41,8 @@ class _MyAppState extends State<MyApp> {
               children: [
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  onPrimary: Colors.red,
-                  primary: Colors.orange,
+                  onPrimary: Colors.white,
+                  primary: buttonColor,
                 ),
                 onPressed: (){
                   setState(() {
@@ -54,6 +54,10 @@ class _MyAppState extends State<MyApp> {
                 child: Text(buttonName),
               ),
               ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  onPrimary: Colors.white,
+                  primary: buttonColor2,
+                ),
                 onPressed: (){
                   setState(() {
                     buttonName = "Clicked";
