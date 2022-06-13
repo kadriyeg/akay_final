@@ -72,23 +72,35 @@ class _MyAppState extends State<MyApp> {
           ) : Image.network('https://ichef.bbci.co.uk/images/ic/1200x675/p0b0n5gc.jpg'), 
         ),
         bottomNavigationBar: BottomNavigationBar(
-          items: const [
-            BottomNavigationBarItem(
-              label: 'Home',
-              icon: Icon( Icons.abc),
-            ),
-            BottomNavigationBarItem(
-              label: 'olala',
-              icon: Icon(Icons.accessible),
-            ),
-          ],
-          currentIndex: currentIndex,
-          onTap: (int index){
-            setState(() {
-              currentIndex = index; 
+            type: BottomNavigationBarType.fixed, // Shifting
+            selectedItemColor: Colors.blue[100],
+            unselectedItemColor: Colors.grey,
+            backgroundColor: Colors.white,
+            items: const [
+              BottomNavigationBarItem(
+                label: 'Ana Sayfa',
+                icon: Icon(Icons.home_filled),
+              ),
+              BottomNavigationBarItem(
+                label: 'Dersler',
+                icon: Icon(Icons.school),
+              ),
+              BottomNavigationBarItem(
+                label: 'AKAYbot',
+                icon: Icon(Icons.chat_bubble_outline),
+              ),
+              BottomNavigationBarItem(
+                label: 'Profil',
+                icon: Icon(Icons.person_outlined),
+              ),
+            ],
+            currentIndex: currentIndex,
+            onTap: (int index){
+              setState(() {
+                currentIndex = index; 
             });
           },
-        ),
+          ),
       )
     );
   }
