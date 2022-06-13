@@ -1,3 +1,3 @@
 import 'package:flutter/cupertino.dart';
 
-Color backGroundColor= Color(0x120D39);
+Color backGroundColor= Color.fromARGB(255, 37, 6, 81);
