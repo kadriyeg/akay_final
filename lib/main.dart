@@ -73,7 +73,7 @@ class _MyAppState extends State<MyApp> {
         ),
         bottomNavigationBar: BottomNavigationBar(
             type: BottomNavigationBarType.fixed, // Shifting
-            selectedItemColor: Colors.blue[100],
+            selectedItemColor: Colors.purple[100],
             unselectedItemColor: Colors.grey,
             backgroundColor: Colors.white,
             items: const [
