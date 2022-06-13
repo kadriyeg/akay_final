@@ -24,7 +24,9 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('App Title'),
+          backgroundColor: backGroundColor,
+
+         //title: const Text('App Title'),
         ),
         body:  Center(
           //child: SizedBox da diyebilirsin.
