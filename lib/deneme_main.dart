@@ -63,7 +63,7 @@ class FirstPage extends StatelessWidget {
                         Image.asset('images/oturan_akay.png'),
                           ],
                         ),
-                        SizedBox( width: 100),
+                        SizedBox( width: 50),
                         Column(
                         children: [
                           Text(
@@ -138,6 +138,9 @@ class FirstPage extends StatelessWidget {
                           ),
                         ],
                       ),
+
+                      SizedBox(width: 30),
+                      
                       Column(
                       children: [
                         ElevatedButton(
