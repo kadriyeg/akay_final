@@ -44,20 +44,20 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 ), 
               ),
             ),
-            const SizedBox(
+            SizedBox(
               height: 60, 
               width: 60,
               child: ElevatedButton(
-                onPressed: (){
-                  _pageController.nextPage(
-                    duration: Duration(milliseconds: 300),
-                    curve: Curves.ease,
-                    );
-                },
                 style: ElevatedButton.styleFrom(
                   shape: const CircleBorder(),
                 ),
-                child: SvgPicture.asset("images/right-arrow-svgrepo-com.svg",
+                onPressed: () {
+                  _pageController.nextPage(
+                    duration: const Duration(milliseconds: 300),
+                    curve: Curves.ease,
+                    );
+                },
+                child: Image.asset("images/right-arrow-svgrepo-com.svg",
                  color: Colors.white,
                 ),
               ),
@@ -67,6 +67,16 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       ),
     );
   }
+}
+
+class Onboard {
+  final String image, title, description;
+
+  Onboard({
+    required this.image,
+    required this.title, 
+    required this.description,
+    });
 }
 
 class OnboardContent extends StatelessWidget {
