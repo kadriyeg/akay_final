@@ -228,7 +228,7 @@ class FirstPage extends StatelessWidget {
                 icon: Icon(Icons.person_outlined),
               ),
             ],
-            currentIndex: 2,
+            currentIndex: currentIndex,
             onTap: (int index){
               setState(() {
                 currentIndex = index; 
