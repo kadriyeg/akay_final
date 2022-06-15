@@ -96,6 +96,7 @@ class _MyAppState extends State<MyApp> {
                       ],
                     ),
                   ),
+                  SizedBox(height:20),
                   //PYTHON ALGORİTMA ROW
                   Row(
                     children: [
@@ -167,32 +168,28 @@ class _MyAppState extends State<MyApp> {
                     ),
                     ],
                   ),
+                  SizedBox(height: 15),
                   //KALDIĞIN YERDEN DEVAM ET
                   Row(
                     children: [
                       Column(
                         children: [
-                          ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              onPrimary: Colors.white,
-                              primary: buttonColor,
+                            Container(
+                            height:95,
+                            width: 260,
+                            decoration: BoxDecoration(//color: Colors.pink,
+                            image: DecorationImage(image: ExactAssetImage('images/icon_yilan.png'),
+                            //fit: BoxFit.fitWidth,
                             ),
-                            onPressed: (){
-                              setState(() {
-                                buttonName = "Clicked";
-                              }
-                              );
-                          // ignore: avoid_print
-                            },
-                            child: Text(buttonName),
+                            ),
+                            child: Text(
+                              "Kaldığın yerden devam et",
+                              style: TextStyle(fontSize: 20,color: Colors.white),
+                              textAlign: TextAlign.center,
+                            ),
                           ),
                         ],
                       ),
-                      Column(
-                      children: [
-                        Image.asset('images/oturan_akay.png'),
-                      ],
-                    ),
                     ],
                   ),
                 ]
