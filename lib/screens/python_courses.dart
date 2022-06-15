@@ -11,10 +11,11 @@ class PythonCourses extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
+      backgroundColor: backGroundColor,
       appBar: AppBar(
-          backgroundColor: backGroundColor,
-          elevation: 0,
-         //title: const Text('App Title'),
+          backgroundColor: Color.fromARGB(255, 14, 5, 46),
+          //elevation: 0,
+          title: const Text('PYTHON'),
         ),
     );
   }
