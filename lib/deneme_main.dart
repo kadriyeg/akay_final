@@ -1,4 +1,3 @@
-import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constants.dart';
 
@@ -14,15 +13,24 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  String buttonName= "click";
-  int currentIndex = 0;
-
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
+      home: FirstPage(),
+    );
+  }
+}
+
+class FirstPage extends StatelessWidget {
+  const FirstPage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+            String buttonName= "click";
+            int currentIndex = 0;
+    return Scaffold(
         backgroundColor: backGroundColor,
         appBar: AppBar(
           backgroundColor: backGroundColor,
@@ -138,10 +146,13 @@ class _MyAppState extends State<MyApp> {
                               primary: buttonColor,
                             ),
                             onPressed: (){
-                              setState(() {
+                              /*setState(() {
                                 buttonName = "Clicked";
                               }
-                              );
+                              );*/
+                              Navigator.of(context).push(MaterialPageRoute(builder:(BuildContext context){
+                                return SecondPage();
+                              },  ),);
                           // ignore: avoid_print
                             },
                             child: Container(
@@ -228,18 +239,19 @@ class _MyAppState extends State<MyApp> {
             });
           },
           ),
-      )
-    );
+      );
   }
+
+  void setState(Null Function() param0) {}
 }
-
-
 class SecondPage extends StatelessWidget {
   @override
   const SecondPage({Key? key}) : super(key: key);
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Container();
+    return Scaffold(
+      appBar: AppBar(),
+    );
   }
 
 }
