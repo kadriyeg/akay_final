@@ -1,28 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/constants.dart';
+import 'package:flutter_application_1/screens/python_courses.dart';
+import '../constants.dart';
+import 'package:flutter_application_1/main.dart';
 
-void main() {
-  runApp( MyApp());
-}
-
-class MyApp extends StatefulWidget {
-  MyApp({Key? key}) : super(key: key);
-
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return  MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: FirstPage(),
-    );
-  }
-}
-
+import 'algoritma_page.dart';
 class FirstPage extends StatelessWidget {
   const FirstPage({Key? key}) : super(key: key);
 
@@ -104,7 +86,6 @@ class FirstPage extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(height:20),
                   //PYTHON ALGORİTMA ROW
                   Row(
                     children: [
@@ -121,17 +102,21 @@ class FirstPage extends StatelessWidget {
                               }
                               );
                           // ignore: avoid_print
+                               Navigator.of(context).push(MaterialPageRoute(builder:(BuildContext context){
+                                return AlgoritmaPage();
+                              },  ),);
                             },
+                            
                             child: Container(
                             height:95,
                             width: 120,
                             decoration: BoxDecoration(//color: Colors.pink,
-                            image: DecorationImage(image: ExactAssetImage('images/icon_yilan.png'),
+                            image: DecorationImage(image: ExactAssetImage('images/icon_algoritma.png'),
                             //fit: BoxFit.fitWidth,
                             ),
                             ),
                             child: Text(
-                              "PYTHON",
+                              "ALGORİTMA",
                               style: TextStyle(fontSize: 20,color: Colors.white),
                               textAlign: TextAlign.center,
                             ),
@@ -150,12 +135,12 @@ class FirstPage extends StatelessWidget {
                               primary: buttonColor,
                             ),
                             onPressed: (){
-                              /*setState(() {
+                              setState(() {
                                 buttonName = "Clicked";
                               }
-                              );*/
+                              );
                               Navigator.of(context).push(MaterialPageRoute(builder:(BuildContext context){
-                                return SecondPage();
+                                return PythonCourses();
                               },  ),);
                           // ignore: avoid_print
                             },
@@ -179,28 +164,32 @@ class FirstPage extends StatelessWidget {
                     ),
                     ],
                   ),
-                  SizedBox(height: 15),
                   //KALDIĞIN YERDEN DEVAM ET
                   Row(
                     children: [
                       Column(
                         children: [
-                            Container(
-                            height:95,
-                            width: 260,
-                            decoration: BoxDecoration(//color: Colors.pink,
-                            image: DecorationImage(image: ExactAssetImage('images/icon_yilan.png'),
-                            //fit: BoxFit.fitWidth,
+                          ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              onPrimary: Colors.white,
+                              primary: buttonColor,
                             ),
-                            ),
-                            child: Text(
-                              "Kaldığın yerden devam et",
-                              style: TextStyle(fontSize: 20,color: Colors.white),
-                              textAlign: TextAlign.center,
-                            ),
+                            onPressed: (){
+                              setState(() {
+                                buttonName = "Clicked";
+                              }
+                              );
+                          // ignore: avoid_print
+                            },
+                            child: Text(buttonName),
                           ),
                         ],
                       ),
+                      Column(
+                      children: [
+                        Image.asset('images/oturan_akay.png'),
+                      ],
+                    ),
                     ],
                   ),
                 ]
@@ -244,14 +233,4 @@ class FirstPage extends StatelessWidget {
 
   void setState(Null Function() param0) {}
 }
-class SecondPage extends StatelessWidget {
-  @override
-  const SecondPage({Key? key}) : super(key: key);
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return Scaffold(
-      appBar: AppBar(),
-    );
-  }
 
-}
