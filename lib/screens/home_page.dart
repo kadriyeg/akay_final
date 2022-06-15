@@ -134,7 +134,7 @@ class FirstPage extends StatelessWidget {
                               }
                               );
                               Navigator.of(context).push(MaterialPageRoute(builder:(BuildContext context){
-                                return SecondPage();
+                                return PythonCourses();
                               },  ),);
                           // ignore: avoid_print
                             },
