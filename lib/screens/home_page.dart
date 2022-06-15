@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/python_courses.dart';
 import '../constants.dart';
 import 'package:flutter_application_1/main.dart';
+
+import 'algoritma_page.dart';
 class FirstPage extends StatelessWidget {
   const FirstPage({Key? key}) : super(key: key);
 
@@ -100,17 +102,21 @@ class FirstPage extends StatelessWidget {
                               }
                               );
                           // ignore: avoid_print
+                               Navigator.of(context).push(MaterialPageRoute(builder:(BuildContext context){
+                                return AlgoritmaPage();
+                              },  ),);
                             },
+                            
                             child: Container(
                             height:95,
                             width: 120,
                             decoration: BoxDecoration(//color: Colors.pink,
-                            image: DecorationImage(image: ExactAssetImage('images/icon_yilan.png'),
+                            image: DecorationImage(image: ExactAssetImage('images/icon_algoritma.png'),
                             //fit: BoxFit.fitWidth,
                             ),
                             ),
                             child: Text(
-                              "PYTHON",
+                              "ALGORİTMA",
                               style: TextStyle(fontSize: 20,color: Colors.white),
                               textAlign: TextAlign.center,
                             ),
@@ -227,3 +233,4 @@ class FirstPage extends StatelessWidget {
 
   void setState(Null Function() param0) {}
 }
+
