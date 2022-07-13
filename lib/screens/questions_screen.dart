@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/constants.dart';
 import 'package:flutter_application_1/models/questions_model.dart';
+import '../widgets/question_widget.dart';
 
 class QuestionsScreen extends StatefulWidget {
   const QuestionsScreen({ Key? key }) : super(key: key);
@@ -34,6 +35,17 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
         shadowColor: Colors.transparent,
 
 
+      ),
+      body: Container(
+        width: double.infinity,
+        child: Column(
+          children: [
+            QuestionWidget(
+              indexAction: index, question: _questions[index].title, totalQuestions: _questions.length,
+              
+            ),
+          ],
+        ),
       ),
     );
   }

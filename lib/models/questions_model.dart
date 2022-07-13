@@ -1,6 +1,6 @@
 //creating a question model here
 
-import 'dart:html';
+import 'package:flutter/material.dart';
 
 class Question{
   final String id;
