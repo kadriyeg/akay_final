@@ -1,5 +1,7 @@
 //creating a question model here
 
+import 'dart:html';
+
 class Question{
   final String id;
   final String title;
@@ -13,4 +15,8 @@ class Question{
     required this.options,
   });
   
+  @override
+  String toString() {
+   return 'Question(id: $title, options: $options)';
+  }
 }

@@ -4,7 +4,8 @@ import 'package:flutter_application_1/main.dart';
 import '../constants.dart';
 import '../main.dart';
 import 'package:flutter/src/painting/gradient.dart';
-
+import './questions_screen.dart';
+import '../constants.dart';
 
 // ignore: camel_case_types
 class PythonCourses extends StatelessWidget {
@@ -30,7 +31,11 @@ class PythonCourses extends StatelessWidget {
                   itemCount: 8,
                   itemBuilder: (_, i){
                     return ElevatedButton(
-                    onPressed: () {  },
+                    onPressed: () { 
+                      Navigator.of(context).push(MaterialPageRoute(builder:(BuildContext context){
+                                return QuestionsScreen();
+                              },  ),);
+                     },
                     child: Container(
                       width: double.infinity,
                       height: 100,
