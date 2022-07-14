@@ -69,29 +69,40 @@ class MySquare extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(top: 15.0, left: 10.0, right: 10.0),
-      child: Container(
-                      width: double.infinity,
-                      height: 50,
-                        decoration: BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                          topRight: Radius.circular(20),
-                          bottomLeft: Radius.circular(20)
+      child: InkWell(
+        child: Container(
+                        width: double.infinity,
+                        height: 50,
+                          decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(20),
+                            bottomLeft: Radius.circular(20)
+                          ),
+                          color: buttonColor,
+                          boxShadow: [
+                            BoxShadow(
+                              offset: Offset(10,10),
+                              blurRadius: 10,
+                              color: Color.fromARGB(255, 15, 6, 24)
+                            )
+                          ]
                         ),
-                        color: buttonColor,
-                        boxShadow: [
-                          BoxShadow(
-                            offset: Offset(10,10),
-                            blurRadius: 10,
-                            color: Color.fromARGB(255, 15, 6, 24)
-                          )
-                        ]
-                      ),
-      child: Center (child: Text(
-        child,
-        style: TextStyle(fontSize: 20, color: Colors.white), 
-        //textAlign: TextAlign.start,
-        ),
-        )
+        child: Center (child: Text(
+          child,
+          style: TextStyle(fontSize: 20, color: Colors.white), 
+          //textAlign: TextAlign.start,
+          ),
+          )
+        ), 
+        onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (BuildContext context) {
+                              return QuestionsScreen();
+                            },
+                          ),
+                        );
+                      },
       )
       );
     
