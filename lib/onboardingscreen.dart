@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/material/elevated_button.dart';
+//mport 'package:flutter/src/material/elevated_button.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen(Set set, {Key? key}) : super(key: key);
