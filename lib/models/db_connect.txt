@@ -1,0 +1,44 @@
+import 'package:http/http.dart';
+import './questions_model.dart';
+import 'dart:convert';
+
+class DBconnect {
+  //let's first create  a function to add a question to our database.
+//decalre the name of the table you want to create and add .json as suffix
+  final url= Uri.parse('the url that we dont know');
+  Future<void> addQuestion(Question question) async {
+   http.post(
+    url, 
+    body:json.encode({
+      'title': question.title,
+      'options': question.options,
+
+    }),
+     );
+  }
+
+  //fetch the data from database
+  Future<void> fetchQuestions()async {
+    //we got the data from just using this. now let's print it to see what we got.
+    http.get(url).then((response){
+          //the then method returns a 'response' which is our data.
+          //to see whats inside we have to decode it first.
+          var data = json.decode(response.body) as Map.String, dynamics>;
+          data.forEach((key, value) {
+            var newQuestion = Question(
+              id: key, //the encripted key, the title we gave to our data
+              title: value['title'] //enetring this will pop up new data on database (title of the question)
+              options: value['options'],
+            );
+          });
+
+    });
+    
+  }
+}
+
+//create an object for 'DBconnect' class in main.dart and add a question
+//void mainin altına hemen: 
+var db= DBconnect();
+db.addQuestion(
+   Question(id: '20', 'title': 'what is 10*10?',options {'100':true,'200':false}));
