@@ -21,7 +21,7 @@ class Psayilar extends StatelessWidget {
           child: Column(
             children: [
               Text(
-                "PYTHONDA SAYILAR",
+                "PYTHONDA SAYILAR\n",
                 style: TextStyle(fontSize: 30, color: Colors.white),
               ),
               Text(
@@ -32,65 +32,97 @@ class Psayilar extends StatelessWidget {
                 "KOD ÖRNEĞİ",
                 style: TextStyle(fontSize: 25, color: Colors.white),
               ),
-              Container(
-                decoration: BoxDecoration(
-                  border: Border.all(color: buttonColor, width: 2),
-                ),
-                child: Text(
-                  "Print(2+2);\n\nÇıktı: 4",
-                  style: TextStyle(fontSize: 16, color: Colors.white),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  width: double.infinity,
+                    height: 80,
+                  decoration: BoxDecoration(
+                    border: Border.all(color: buttonColor, width: 2),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 20.0, top: 5, bottom: 5),
+                    child: Text(
+                      "Print(2+2);\n\nÇıktı: 4",
+                      style: TextStyle(fontSize: 16, color: Colors.white),
+                    ),
+                  ),
                 ),
               ),
-                 Container(
+                 Padding(
+                   padding: const EdgeInsets.all(8.0),
+                   child: Container(
+                    width: double.infinity,
+                    height: 80,
                 decoration: BoxDecoration(
-                  border: Border.all(color: buttonColor, width: 2),
+                    border: Border.all(color: buttonColor, width: 2),
                 ),
-                child: Text(
-                  "Print(2+1.5);\n\nÇıktı: 3.5",
-                  style: TextStyle(fontSize: 16, color: Colors.white),
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 20.0, top: 5, bottom: 5),
+                  child: Text(
+                      "Print(2+1.5);\n\nÇıktı: 3.5",
+                      style: TextStyle(fontSize: 16, color: Colors.white),
+                  ),
                 ),
               ),
+                 ),
               Text(
-                "Matematiksel Operatörler",
+                "Matematiksel Operatörler\n",
                 style: TextStyle(fontSize: 25, color: Colors.white),
               ),
               Text(
-                "Operatörler, değişkenler ve değerler üzerinde işlem yapmak için kullanılır.",
+                "Operatörler, değişkenler ve değerler üzerinde işlem yapmak için kullanılır.\n",
                 style: TextStyle(fontSize: 16, color: Colors.white),
               ),
               Text(
-                "	Veri tipi dönüşümleri",
+                "Veri tipi dönüşümleri\n",
                 style: TextStyle(fontSize: 25, color: Colors.white),
               ),Text(
-                "“type()” İşlevi  herhangi bir nesnenin veri türünü öğrenmek için kullanılır.",
+                "“type()” İşlevi  herhangi bir nesnenin veri türünü öğrenmek için kullanılır.\n",
                 style: TextStyle(fontSize: 16, color: Colors.white),
               ),
                     Text(
                 "KOD ÖRNEĞİ",
                 style: TextStyle(fontSize: 25, color: Colors.white),
               ),
-              Container(
-                decoration: BoxDecoration(
-                  border: Border.all(color: buttonColor, width: 2),
-                ),
-                child: Text(
-                  "x = 5\n\nprint(type(x))\n\nçıktı: int\n\nVeri türünü dönüştürmek için aşağıdaki yapıcı işlevler kullanılır;\n\nx = int(20)\n\nx = float(20.5)",
-                  style: TextStyle(fontSize: 16, color: Colors.white),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  width: double.infinity,
+                    height: 120,
+                  decoration: BoxDecoration(
+                    border: Border.all(color: buttonColor, width: 2),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 20.0, top: 5, bottom: 5),
+                    child: Text(
+                      "x = 5\n\nprint(type(x))\n\nçıktı: int\n\nVeri türünü dönüştürmek için aşağıdaki yapıcı işlevler kullanılır;\n\nx = int(20)\n\nx = float(20.5)",
+                      style: TextStyle(fontSize: 16, color: Colors.white),
+                    ),
+                  ),
                 ),
               ),
               Text(
                 "Dönüşüm için Kod örneği:",
                 style: TextStyle(fontSize: 25, color: Colors.white),
               ),
-               Container(
-                decoration: BoxDecoration(
-                  border: Border.all(color: buttonColor, width: 2),
-                ),
-                child: Text(
-                  "x = str(3)    # x in türü string olarak ayarlandı '3'\n\ny = int(3)    # y x in türü tam sayı (int) olarak ayarlandı 3\n\nz = float(3)  # z x in türü ondalıklı sayı (float) olarak ayarlandı 3.0",
-                  style: TextStyle(fontSize: 16, color: Colors.white),
-                ),
+               Padding(
+                 padding: const EdgeInsets.all(8.0),
+                 child: Container(
+                  width: double.infinity,
+                    height: 150,
+                  decoration: BoxDecoration(
+                    border: Border.all(color: buttonColor, width: 2),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 20.0, top: 5, bottom: 5),
+                    child: Text(
+                      "x = str(3)    # x in türü string olarak ayarlandı '3'\n\ny = int(3)    # y x in türü tam sayı (int) olarak ayarlandı 3\n\nz = float(3)  # z x in türü ondalıklı sayı (float) olarak ayarlandı 3.0",
+                      style: TextStyle(fontSize: 16, color: Colors.white),
+                    ),
+                  ),
               ),
+               ),
               InkWell(
                 child: Center(
                   child: Container(

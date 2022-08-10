@@ -17,6 +17,7 @@ import './questions_screen.dart';
 import '../constants.dart';
 
 
+
 class PythonCourses extends StatelessWidget {
 
   final List konular = [
@@ -108,7 +109,7 @@ class PythonCourses extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => Pdegiskenler(),
+                      builder: (context) => Psayilar(),
                     ),
                   );
                 },
