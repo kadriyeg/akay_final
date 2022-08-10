@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_application_1/screens/pythonikincikonusorular.dart';
 import '../../constants.dart';
 import '../python_courses.dart';
 
@@ -145,7 +145,7 @@ class Psayilar extends StatelessWidget {
                   Navigator.of(context).push(
                     MaterialPageRoute(
                       builder: (BuildContext context) {
-                        return PythonCourses();
+                        return PythonIkiSoru();
                       },
                     ),
                   );

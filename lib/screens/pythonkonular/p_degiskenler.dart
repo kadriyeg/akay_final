@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_application_1/screens/pythonbirincikonusorular.dart';
 import '../../constants.dart';
 import '../python_courses.dart';
 
@@ -109,7 +109,7 @@ class Pdegiskenler extends StatelessWidget {
                   Navigator.of(context).push(
                     MaterialPageRoute(
                       builder: (BuildContext context) {
-                        return PythonCourses();
+                        return PythonBirSoru();
                       },
                     ),
                   );

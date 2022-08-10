@@ -7,40 +7,55 @@ import '../widgets/next_button.dart';
 import '../widgets/option_card.dart';
 import '../widgets/result_box.dart';
 
-class PythonBirSoru extends StatefulWidget {
-  const PythonBirSoru({ Key? key }) : super(key: key);
+class PythonIkiSoru extends StatefulWidget {
+  const PythonIkiSoru({ Key? key }) : super(key: key);
 
   @override
-  State<PythonBirSoru> createState() => _PythonBirSoruState();
+  State<PythonIkiSoru> createState() => _PythonIkiSoruState();
 }
 
-class _PythonBirSoruState extends State<PythonBirSoru> {
+class _PythonIkiSoruState extends State<PythonIkiSoru> {
   // ignore: prefer_final_fields
   List<Question> _questions = [
     Question(
       id: '10',
-      title: 'Hangi değişkene atanan değer doğrudur?',
-      options: {'isim="Melek"': true, 'isim=23': false,'isim=345.0': false, 'isim=:)': false},
+      title: 'Integer nedir?',
+      options: { 'Tam sayı anlamına gelen, tam sayı değerlerini atayabilen bir veri türüdür.': true,'Karakter dizisidir': true, 'Ondalıklı sayıları atayabileceğimiz bir veri türüdür.': false, 'Liste oluşturmamızı sağlar.': false},
     ),
     Question(
       id: '10',
-      title: 'Hangi değişken bir sayısal değer tutmaz?',
-      options: {'Integer': false, 'Boolean': true, 'Floating Point': false, 'Complex': false},
+      title: 'Aşağıdaki kodun çıktısı nedir?\n Print(3.4+2.0);',
+      options: {'6.7': false, '5.4': true,'8': false, 'beş nokta iki': false},
     ),
     Question(
       id: '10',
-      title: 'What is 5 + 2 ?',
-      options: {'5': false, '30': false, '7': true, '10': false},
+      title: 'Float nedir?',
+      options: {'Ondalıklı sayı değerlerini atayabilen bir veri türüdür': false,  'Tam sayı değerlerini atayabilen bir veri türüdür.': false,'Karakter dizisidir.': true, 'Toplama operatörünün adıdır.': false},
     ),
     Question(
       id: '10',
-      title: 'What is 5 + 2 ?',
-      options: {'5': false, '30': false, '7': true, '10': false},
+      title: 'Hangisi bir integer olabilir?',
+      options: {'7k': false, '-42': true,'"beş"': false,  '42.0': false},
+    ),
+    Question(
+      id: 'Hangisi bir float olabilir?',
+      title: 'Aşağıdakilerden hangisi atama operatörüdür?',
+      options: {'"on nokta sekiz"': false, '-800': false, '54.8': true, '.3.': false},
     ),
     Question(
       id: '10',
-      title: 'What is 5 + 2 ?',
-      options: {'5': false, '30': false, '7': true, '10': false},
+      title: 'x=2.3\nprint(type(x));\n Kodun çıktısı ne olabilir?',
+      options: {'integer': false, 'int': false, 'flt': false,'float': true},
+    ),
+    Question(
+      id: '10',
+      title: 'y=str(56) \ny hangi değişken türü olmuştur?',
+      options: {'integer': false,'string': true, 'float': false, 'list': false},
+    ),
+    Question(
+      id: '10',
+      title: 'n=float(8)\nprint(n); kodun çıktısı nedir?',
+      options: {'"8"': false,'8': false, 'sekiz': false, '8.0': true},
     ),
   ];
   //create an index to loop through _questions
@@ -112,7 +127,7 @@ class _PythonBirSoruState extends State<PythonBirSoru> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("FONKSİYONLAR"), 
+        title: const Text("DEĞİŞKENLER"), 
         backgroundColor: backGroundColor,
         shadowColor: backGroundColor,
         //adding score to show in the app
