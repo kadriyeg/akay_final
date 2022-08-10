@@ -15,13 +15,44 @@ class QuestionWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      alignment: Alignment.centerLeft,
-      child: Text('Question ${indexAction + 1}/$totalQuestions: $question',
-      style: const TextStyle(
-        fontSize: 24.0,
-        color: neutral,
+      child: Padding(
+        padding: EdgeInsets.only(top:10,left:20,right:20,),
+        child:Row(
+          children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Image.asset('images/oturan_akay.png'),
+              InkWell(
+                child: Container(
+                  alignment: Alignment.centerRight,
+                  padding: const EdgeInsets.all(30.0),
+                  child: Text('${indexAction + 1}/$totalQuestions: $question',
+                  style: const TextStyle(
+                    fontSize: 12.0,
+                    color: Colors.white,)
+                  ),
+                  decoration: const BoxDecoration(
+                    color: buttonColor,
+                    borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(30),
+                    topLeft: Radius.circular(30.0),
+                    bottomRight: Radius.circular(30),
+                    )
+                  )  
+                ),
+              ),
+            ],
+            
+          ),
+          
+          //mascot
+          ],
+
+        ),
+        
       )
-      ),
+              
     );
   }
 }

@@ -24,7 +24,7 @@ class ResultBox extends StatelessWidget {
         children: [
           const Text(
             'Sonuç',
-            style: TextStyle(color: neutral, fontSize: 22.0),
+            style: TextStyle(color: Colors.white, fontSize: 22.0),
             ),
           const SizedBox(height: 20.0),
           CircleAvatar(
@@ -40,8 +40,8 @@ class ResultBox extends StatelessWidget {
                     : result == questionLength/2
                         ? Colors.yellow 
                         : result> questionLength/2
-                            ? Colors.blueAccent
-                            : Colors.black ,
+                            ? backGroundColor
+                            : buttonColor ,
           ),
           const SizedBox(height:  20.0),
           Text(
@@ -54,7 +54,7 @@ class ResultBox extends StatelessWidget {
                         : result> questionLength/2
                             ? 'neredeyse konunun hakimisin!'
                             : 'escape point burası',
-            style: const TextStyle(color: neutral),
+            style: const TextStyle(color: Colors.white),
             ),
             const SizedBox(height: 25.0),
             GestureDetector(
@@ -64,7 +64,7 @@ class ResultBox extends StatelessWidget {
               child: const Text(
                 'Başla',
                 style: TextStyle(
-                  color: Colors.blue, 
+                  color: Colors.white, 
                   fontSize: 20.0,
                   letterSpacing: 1.0,
                 ),

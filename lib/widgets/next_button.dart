@@ -19,6 +19,7 @@ class NextButton extends StatelessWidget {
         child: const Text(
           'atla',
           textAlign: TextAlign.center,
+          style: TextStyle(color: Colors.white),
           ),
       ),
     );

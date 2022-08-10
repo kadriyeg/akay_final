@@ -10,7 +10,7 @@ import '../constants.dart';
 class AlgoritmaPage extends StatelessWidget {
 
   final List konular = [
-  'Algoritmaya giriş ', 
+  'Algoritmaya giriş', 
   'Değişken -temel', 
   'Karar Yapıları',
   'Matematiksel Operatörler', 
