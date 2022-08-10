@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "akayfirebase",
+  "private_key_id": "f50353229f9ba1e7c663105edcae49624ca29c44",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCozj6sRY9VnsSj\ngEa1aqjQH6EXZ+R0v8kIv0UbLAM+5kqoOyZEbw/lyWeFmumULKyg3xtvyDoDb03l\n7J6ul8NBaygyWiBoNinLuzfAZ1SeizEyvh+aEysXhIya4J8cZy3dcGQvHhwtIIRC\nX3i36kqh4J1kwviwLiLyPWMBCI5uMTOXgbER3Nd8799XeoZN42JJJ3Vnyv9/ZqzR\nwVfOAMRBbaBcdLOxTCv+5/NRuBVEZS3ERc8DYOhBpaJor7LvnYZphyymzSVzKpKP\n0U6TLgrRzTnogFpbTOKv9UoRMsaJXULrr+dwBbEFx/+92gEzjm8wmsOsY6S57q0E\n32B8LWRrAgMBAAECggEAG2iJco1EzaEeynFcib5MtKY+EL/Ur0QojxwHS3ck+8SG\noLQh7YCe8y91eJMDlASA7wnquYaoLMCYxFlcFnsbv/Z3K13I30LUHHlEfyAH9Eoj\nbdrC5NBx8bqa3dbU3ta98rN6ANCBwK4D64b24d3PymLfC2pA2NJU6EIhXhyWi7t7\nZlSYWkaBDU5GOyOQyyX8C1mbAMXodYISeCCJ0TWW9/fSil9R2Fqy1ejlaMcEX8Kb\noRoFftqcCT9Gwe40ou5sDEycFq6hHfU12grHSWq6g6ITwjJqgqquMQ5b/kEQ+JBB\nczcny8J1tlvwoLbIy8LgPutLOh4jZ2HLcjs/GGVzKQKBgQDqizwZJCy927XqchOx\nlPiVNQag4bRneKqHnQRJPJMsz0Go75WezoZB5+HsA2pqexb1syHFHdJoNpVAermK\n8iHYMa+271JuMGvnxoiByDzSQ2oWfM90LJn8ESvOHIQP4wf56HgifxMCRYzP9YTV\n9k2a+H7GkHkynVTVAr6XX4idZwKBgQC4P33AkLtNn5tOVVkSSxkn7+32ms3ipNSj\nBiNgXvgKW2sCjzST/dM86BfS3hZOaM9N5PqYuzx9TddXVs6E7Cj4Urj4Gnv+6kCD\nG9X84Tgxf6AjxmKS3jJQmgKlAgJVUgdiq8bjsHFP3vYkDPW+OEf5WG4ea1ieSyXv\n34QjBlpaXQKBgGFku+n8uY+FQr8966ucHrVmtX/s+YrV8oopy3PV8Y9z6OILyueM\n/vczIP9uU6wvvNL+NZGy1oJr2AJUc+OctC0gRMUEEAitlsFCEcFCsu7lC5KW9VZa\nhv7C6pvF/5jRP6ioveolNnGFC/n3C9gFVSh687nkmE9KQcXKQ/Z7tzEVAoGAWBMB\nqeuFnbWOKAPkcDo17EFlH10gzha9DrEAeDDtoQXSQYbzO0s6jwLjYImJYDH55uJu\naFQYtk1fgwCb+C5r50ij4vXGEDUqYYIM6LVAh2jaxD8xH8PXiXAVk4tCUkbEAQbc\nLDtL70JFpzYKwsNkpG0BNslZs1F48RGHuLZwuoECgYA9hTxJ1t34Bd3weWnK5I78\nDb5Ve5UFfGhlbopXCP9spqHpbCrB+nWJ1Z8Ze2lmJeg7X1Ikh7a8bLzwIfATTA8m\nHTlTud40GxhVZfpdfqnWzf90C1w2kVYKJTiTq0d/8kojlasKJ2IR5HGX4iiy7svy\nHPIBWqAIan0cY4//Y6qKVg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "akaydialogflowservice@akayfirebase.iam.gserviceaccount.com",
+  "client_id": "108736819498377231122",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/akaydialogflowservice%40akayfirebase.iam.gserviceaccount.com"
+}
