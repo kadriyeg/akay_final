@@ -7,25 +7,25 @@ import '../widgets/next_button.dart';
 import '../widgets/option_card.dart';
 import '../widgets/result_box.dart';
 
-class QuestionsScreen extends StatefulWidget {
-  const QuestionsScreen({Key? key}) : super(key: key);
+class PythonBirSoru extends StatefulWidget {
+  const PythonBirSoru({ Key? key }) : super(key: key);
 
   @override
-  State<QuestionsScreen> createState() => _QuestionsScreenState();
+  State<PythonBirSoru> createState() => _PythonBirSoruState();
 }
 
-class _QuestionsScreenState extends State<QuestionsScreen> {
+class _PythonBirSoruState extends State<PythonBirSoru> {
   // ignore: prefer_final_fields
   List<Question> _questions = [
     Question(
       id: '10',
-      title: 'Hangi kod, bize şu çıktıyı (output) verir: Pyhton Öğreniyorum',
-      options: {'print"Python Öğreniyorum"': false, 'print(Python Öğreniyorum)': false,'print("Python Öğreniyorum")': true, 'Print("python öğreniyorum")': false},
+      title: 'Hangi değişkene atanan değer doğrudur?',
+      options: {'isim="Melek"': true, 'isim=23': false,'isim=345.0': false, 'isim=:)': false},
     ),
     Question(
       id: '10',
-      title: 'What is 5 + 2 ?',
-      options: {'5': false, '30': false, '7': true, '10': false},
+      title: 'Hangi değişken bir sayısal değer tutmaz?',
+      options: {'Integer': false, 'Boolean': true, 'Floating Point': false, 'Complex': false},
     ),
     Question(
       id: '10',

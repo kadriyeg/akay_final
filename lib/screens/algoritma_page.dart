@@ -282,7 +282,3 @@ class AlgoritmaPage extends StatelessWidget {
     );
   }
 }
-
-
-
-   
