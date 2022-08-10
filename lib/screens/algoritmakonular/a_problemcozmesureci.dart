@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_application_1/screens/algoritmaquestionsiki_screen.dart';
 import '../../constants.dart';
 import '../python_courses.dart';
 
@@ -20,14 +20,14 @@ class Acozumsureci extends StatelessWidget {
           padding: const EdgeInsets.all(15.0),
           child: Column(
             children: [
-               Text(
+               const Text(
                 "\n2. Problem Çözme Süreci\n",
                 style: TextStyle(fontSize: 25, color: Colors.white),
               ),
-               Text(
+               const Text(
                 "   Bir önceki konuda incelediğimiz problemi çözerken çözüm sürecine destek olan bazı yaklaşımları belirlemek gerekir ama öncelikle kural ve teknikleri bilmekte fayda var. Haydi birlikte inceleyelim.\n",
                 style: TextStyle(fontSize: 16, color: Colors.white),
-              ), Text(
+              ), const Text(
                 "2.1 Bir Planınız Olsun\n",
                 style: TextStyle(fontSize: 22, color: Colors.white),
               ),
@@ -71,7 +71,7 @@ class Acozumsureci extends StatelessWidget {
                         Navigator.of(context).push(
                           MaterialPageRoute(
                             builder: (BuildContext context) {
-                              return PythonCourses();
+                              return const AlgoritmaQuestionsScreeniki();
                             },
                           ),
                         );

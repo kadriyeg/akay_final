@@ -6,40 +6,41 @@ import '../widgets/next_button.dart';
 import '../widgets/option_card.dart';
 import '../widgets/result_box.dart';
 
-class AlgoritmaQuestionsScreen extends StatefulWidget {
-  const AlgoritmaQuestionsScreen({ Key? key }) : super(key: key);
+class AlgoritmaQuestionsScreeniki extends StatefulWidget {
+  const AlgoritmaQuestionsScreeniki({ Key? key }) : super(key: key);
 
   @override
-  State<AlgoritmaQuestionsScreen> createState() => _AlgoritmaQuestionsScreenState();
+  State<AlgoritmaQuestionsScreeniki> createState() => _AlgoritmaQuestionsScreen2State();
 }
 
-class _AlgoritmaQuestionsScreenState extends State<AlgoritmaQuestionsScreen> {
+class _AlgoritmaQuestionsScreen2State extends State<AlgoritmaQuestionsScreeniki> {
   List<Question> _questions = [
     Question(
       id: '10',
-      title: 'Aşağıdakilerden hangisi iki sayının toplamını bulan algoritmanın adımlarından değildir?',
-      options: {'Başla': false, 'Sayıları topla': false,'Toplamı gir': true, 'Sayıları tanımla': false},
+      title: 'Edibe, teknede balık tutuyor. Şimdiye kadar 400 gramlık 3 çipura ve 200 gramlık alabalıklar tutabildi. Tuttuğu çipuraların toplam ağırlığı alabalıkların toplam ağırlığına eşit olabilmesi için kaç adet alabalık tutmuş olmalıdır?. ',
+      options: {'6': true, '5': false, '4': false, '3': false},
     ),
     Question(
       id: '10',
-      title: 'Birden n’e kadar olan sayıların toplamlarını bulan algoritmayı ve akış şemasını hazırlarken şu adımlar verilmektedir:\n1-    Başla\n2-    n, i ve T değişkenleri tanımla\n3-    n sayısını gir, n=?\n4-    T ve i yi sıfırla\n5-    T=T+i, i=i+1\n6-    T’yi ekrana yaz\n7-    Eğer i<n ise 5. Adıma git\nBu adımlardan hangi ikisii yer değiştirilirse algoritma doğru bir şekilde çalışır?',
-      options: {'  2 ve 4': false, '2 ve 3': false, '4 ve 5': true, '6 ve 7': false},
+      title: 'Bir turnike sırasındaki İrem ve Kadriye`nin durumu ile ilgili aşağıdaki bilgiler veriliyor:\nİrem ve Kadriye`in önünde ve arkalarında en az 1 kişi vardır.\nİrem`ın önündeki kişi sayısı ile Kadriye`nin arkasındaki kişi sayısının toplamı, İrem ve Edibe arasındaki kişi sayısının iki katıdır.\nSırada en az kaç kişi olabilir?',
+      options: {'3': false, '4': false,'5': true, '6': false},
     ),
     Question(
       id: '10',
-      title: 'Algoritması verilen aşağıdaki adımların yaptığı iş hangi şıkta en iyi ifade edilmiştir?\n 1. Başla\n2. a, b değişkenlerini tanımla\n3. a sayısını gir\n4. b sayısını gir\n5. Eğer a>b ise “a, b den büyüktür” yaz\n6. Eğer a<b ise “b, a dan büyüktür” yaz\n7. Eğer a=b ise, “a ile b eşittir” yaz\n8. Dur.',
-      options: {'İki sayının hangisinin büyük olduğunu bulur ': false, 'İki sayıyı toplar': false, 'Birbirine eşit iki sayıyı bulur': true, 'Sayıların toplamını çıktı olarak verir': false},
+      title: 'Basri, cumartesi öğleden sonra öldürüldü. Karısı cinayet sırasında kitap okuyor, kapıcı duşta, şef ise kahvaltı hazırlıyordu. Bahçıvan ise çimleri biçiyordu. Verilen bilgilere göre cinayeti kim işledi?',
+      options: {'Şef': true, 'Basri`nin karısı': false, 'Kapıcı': false, 'Bahçıvan': false},
     ),
     Question(
       id: '10',
-      title: 'Bir iş yerindeki işçilerden yaşı 25’ ten büyük ve maaşı 5000’tlye eşit olanların listesini almak için hangi adım takip edilmemelidir?',
-      options: {'İ =1, n=1': false, 'Yaş bilgisi alınır': false, 'Yaş 25’Ten büyükse maaş 5000’e eşit mi kontrol edilir': true, '25 yaşından küçüklerin 5000 tl maaş alıp almadığı kontrol edilir.': false},
+      title: 'Aşağıdaki ifadelerden bir tanesi yanlış. Bu duruma göre bugün haftanın hangi günü?\nBugün ne pazar ne de Çarşamba\nYarın Pazar veya Çarşamba değil.\nDün Cuma değildi.\nDünden önceki gün ise Pazartesi ya da Pazar değildi.',
+      options: {'Cumartesi': false,'Pazar': true,  'Cuma': false, 'Perşembe': false},
     ),
     Question(
       id: '10',
-      title: 'What is 5 + 2 ?',
-      options: {'5': false, '30': false, '7': true, '10': false},
+      title: 'Aycan`ın ekmek yapabilmesi için tam olarak 35 gram una ihtiyacı vardır. Elinde farklı 3 adet ağırlık bulunan Aycan, önce ilk iki ağırlığı kullanarak tarttığı unu bir kaba koyuyor. Sonra bu kaptan bir kısmını üçüncü ağırlığı kullanarak çıkarıyor ve geriye 35 gram un kalıyor. Aycan`ın kullandığı ağırlıklar sırasıyla ne olabilir?',
+      options: {'45,55 ve 100': false, '40,106 ve 50': false, '85,20 ve 23':false, '25,105 ve 95':  true},
     ),
+    
   ];
   //create an index to loop through _questions
   int index = 0;

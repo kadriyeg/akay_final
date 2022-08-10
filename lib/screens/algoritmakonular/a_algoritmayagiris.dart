@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/algoritma_page.dart';
-import 'package:flutter_application_1/screens/algoritmaquestions_screen';
+import 'package:flutter_application_1/screens/algoritmaquestions_screen.dart';
 import '../../constants.dart';
 import '../python_courses.dart';
 
