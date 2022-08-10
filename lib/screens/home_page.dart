@@ -151,7 +151,7 @@ class FirstPage extends StatelessWidget {
                 height: 100,
                 width:250,
                 decoration: BoxDecoration(
-                   //image: DecorationImage(image: AssetImage('images/kaldigin_yer.png')),
+                   image: DecorationImage(image: AssetImage('images/kaldigin_yer.png')),
                   color: buttonColor,
                   borderRadius: BorderRadius.all(Radius.circular(15)),
                 ),

@@ -26,75 +26,255 @@ class AlgoritmaPage extends StatelessWidget {
       body: (
         ListView(
         children: [
-          ListTile(
-            title: Text('Algoritmaya Giriş',
-          style: TextStyle(color: Colors.green),),
-            trailing: Icon(Icons.keyboard_arrow_right_sharp, color: Colors.green,),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => Agiris(),
-                ),
-              );
-            },
+          Padding(
+            padding: const EdgeInsets.only(top: 15.0, left: 10.0, right: 10.0),
+            child: Container(width: double.infinity,
+                          height: 50,
+                            decoration: BoxDecoration(
+                            borderRadius: BorderRadius.only(
+                              topRight: Radius.circular(20),
+                              bottomLeft: Radius.circular(20)
+                            ),
+                            color: buttonColor,
+                            boxShadow: [
+                              BoxShadow(
+                                offset: Offset(10,10),
+                                blurRadius: 10,
+                                color: Color.fromARGB(255, 15, 6, 24)
+                              )
+                            ]
+                          ),
+              child: ListTile(
+                title: Text('Algoritmaya Giriş',
+              style: TextStyle(fontSize: 20, color: Colors.white),),
+                trailing: Icon(Icons.keyboard_arrow_right_sharp, color: Colors.white,),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Agiris(),
+                    ),
+                  );
+                },
+              ),
+            ),
           ),
-          ListTile(
-            title: Text('Problem Çözme ve Algoritmalar',
-          style: TextStyle(color: Colors.green),),
-            trailing: Icon(Icons.keyboard_arrow_right_sharp, color: Colors.green,),
-                        onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => Acozumsureci(),
-                ),
-              );
-            },
+          Padding(
+            padding: const EdgeInsets.only(top: 15.0, left: 10.0, right: 10.0),
+            child: Container(width: double.infinity,
+                          height: 50,
+                            decoration: BoxDecoration(
+                            borderRadius: BorderRadius.only(
+                              topRight: Radius.circular(20),
+                              bottomLeft: Radius.circular(20)
+                            ),
+                            color: buttonColor,
+                            boxShadow: [
+                              BoxShadow(
+                                offset: Offset(10,10),
+                                blurRadius: 10,
+                                color: Color.fromARGB(255, 15, 6, 24)
+                              )
+                            ]
+                          ),
+              child: ListTile(
+                title: Text('Problem Çözme ve Algoritmalar',
+              style: TextStyle(fontSize: 20, color: Colors.white),),
+                trailing: Icon(Icons.keyboard_arrow_right_sharp, color: Colors.white,),
+                            onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Acozumsureci(),
+                    ),
+                  );
+                },
 
+              ),
+            ),
           ),
-                    ListTile(
+                    Padding(
+                      padding: const EdgeInsets.only(top: 15.0, left: 10.0, right: 10.0),
+                      child: Container(width: double.infinity,
+                          height: 50,
+                            decoration: BoxDecoration(
+                            borderRadius: BorderRadius.only(
+                              topRight: Radius.circular(20),
+                              bottomLeft: Radius.circular(20)
+                            ),
+                            color: buttonColor,
+                            boxShadow: [
+                              BoxShadow(
+                                offset: Offset(10,10),
+                                blurRadius: 10,
+                                color: Color.fromARGB(255, 15, 6, 24)
+                              )
+                            ]
+                          ),
+                        child: ListTile(
             title: Text('Karakter dizileri',
-          style: TextStyle(color: Colors.white),),
+          style: TextStyle(fontSize: 20, color: Colors.white),),
             trailing: Icon(Icons.lock, color: Colors.white,),
 
 
           ),
-                    ListTile(
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 15.0, left: 10.0, right: 10.0),
+                      child: Container(width: double.infinity,
+                          height: 50,
+                            decoration: BoxDecoration(
+                            borderRadius: BorderRadius.only(
+                              topRight: Radius.circular(20),
+                              bottomLeft: Radius.circular(20)
+                            ),
+                            color: buttonColor,
+                            boxShadow: [
+                              BoxShadow(
+                                offset: Offset(10,10),
+                                blurRadius: 10,
+                                color: Color.fromARGB(255, 15, 6, 24)
+                              )
+                            ]
+                          ),
+                        child: ListTile(
             title: Text('Listeler, Tuple',
-          style: TextStyle(color: Colors.white),),
+          style: TextStyle(fontSize: 20, color: Colors.white),),
             trailing: Icon(Icons.lock, color: Colors.white,),
 
           ),
-                    ListTile(
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 15.0, left: 10.0, right: 10.0),
+                      child: Container(width: double.infinity,
+                          height: 50,
+                            decoration: BoxDecoration(
+                            borderRadius: BorderRadius.only(
+                              topRight: Radius.circular(20),
+                              bottomLeft: Radius.circular(20)
+                            ),
+                            color: buttonColor,
+                            boxShadow: [
+                              BoxShadow(
+                                offset: Offset(10,10),
+                                blurRadius: 10,
+                                color: Color.fromARGB(255, 15, 6, 24)
+                              )
+                            ]
+                          ),
+                        child: ListTile(
             title: Text('Dictionary',
-          style: TextStyle(color: Colors.white),),
+          style: TextStyle(fontSize: 20, color: Colors.white),),
             trailing: Icon(Icons.lock, color: Colors.white,),
 
           ),
-                    ListTile(
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 15.0, left: 10.0, right: 10.0),
+                      child: Container(width: double.infinity,
+                          height: 50,
+                            decoration: BoxDecoration(
+                            borderRadius: BorderRadius.only(
+                              topRight: Radius.circular(20),
+                              bottomLeft: Radius.circular(20)
+                            ),
+                            color: buttonColor,
+                            boxShadow: [
+                              BoxShadow(
+                                offset: Offset(10,10),
+                                blurRadius: 10,
+                                color: Color.fromARGB(255, 15, 6, 24)
+                              )
+                            ]
+                          ),
+                        child: ListTile(
             title: Text('Sets',
-          style: TextStyle(color: Colors.white),),
+          style: TextStyle(fontSize: 20, color: Colors.white),),
             trailing: Icon(Icons.lock, color: Colors.white,),
 
           ),
-                    ListTile(
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 15.0, left: 10.0, right: 10.0),
+                      child: Container(width: double.infinity,
+                          height: 50,
+                            decoration: BoxDecoration(
+                            borderRadius: BorderRadius.only(
+                              topRight: Radius.circular(20),
+                              bottomLeft: Radius.circular(20)
+                            ),
+                            color: buttonColor,
+                            boxShadow: [
+                              BoxShadow(
+                                offset: Offset(10,10),
+                                blurRadius: 10,
+                                color: Color.fromARGB(255, 15, 6, 24)
+                              )
+                            ]
+                          ),
+                        child: ListTile(
             title: Text('Pythonda Operatörler',
-          style: TextStyle(color: Colors.white),),
+          style: TextStyle(fontSize: 20, color: Colors.white),),
             trailing: Icon(Icons.lock, color: Colors.white,),
 
           ),
-                    ListTile(
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 15.0, left: 10.0, right: 10.0),
+                      child: Container(width: double.infinity,
+                          height: 50,
+                            decoration: BoxDecoration(
+                            borderRadius: BorderRadius.only(
+                              topRight: Radius.circular(20),
+                              bottomLeft: Radius.circular(20)
+                            ),
+                            color: buttonColor,
+                            boxShadow: [
+                              BoxShadow(
+                                offset: Offset(10,10),
+                                blurRadius: 10,
+                                color: Color.fromARGB(255, 15, 6, 24)
+                              )
+                            ]
+                          ),
+                        child: ListTile(
             title: Text('Pythonda Koşul İfadeleri',
-          style: TextStyle(color: Colors.white),),
+          style: TextStyle(fontSize: 20, color: Colors.white),),
             trailing: Icon(Icons.lock, color: Colors.white,),
 
           ),
-                    ListTile(
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 15.0, left: 10.0, right: 10.0),
+                      child: Container(width: double.infinity,
+                          height: 50,
+                            decoration: BoxDecoration(
+                            borderRadius: BorderRadius.only(
+                              topRight: Radius.circular(20),
+                              bottomLeft: Radius.circular(20)
+                            ),
+                            color: buttonColor,
+                            boxShadow: [
+                              BoxShadow(
+                                offset: Offset(10,10),
+                                blurRadius: 10,
+                                color: Color.fromARGB(255, 15, 6, 24)
+                              )
+                            ]
+                          ),
+                        child: ListTile(
             title: Text('Pythonda Fonksiyonlar',
-          style: TextStyle(color: Colors.white),),
+          style: TextStyle(fontSize: 20, color: Colors.white),),
             trailing: Icon(Icons.lock, color: Colors.white,),
           ),
+                      ),
+                    ),
 
         ],
       )
