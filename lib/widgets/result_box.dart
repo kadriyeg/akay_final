@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../constants.dart';
-
+import 'package:flutter_application_1/screens/home_page.dart';
 //import '../constants.dart';
 
 
@@ -58,11 +58,19 @@ class ResultBox extends StatelessWidget {
             ),
             const SizedBox(height: 25.0),
             GestureDetector(
-              onTap: onPressed,
+              onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (BuildContext context) {
+                              return const FirstPage();
+                            },
+                          ),
+                        );
+                      },
                 //now we need a function to do the work
                 //we will create that in questions screen dart (we did onPressed)
               child: const Text(
-                'Başla',
+                'Bitir',
                 style: TextStyle(
                   color: Colors.white, 
                   fontSize: 20.0,
