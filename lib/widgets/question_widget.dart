@@ -16,18 +16,17 @@ class QuestionWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Padding(
-        padding: EdgeInsets.only(top:10,left:20,right:20,),
+        padding: EdgeInsets.only(top:10,left:10,right:10,),
         child:Row(
           children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Image.asset('images/oturan_akay.png'),
-              InkWell(
-                child: Container(
-                  alignment: Alignment.centerRight,
-                  padding: const EdgeInsets.all(30.0),
+              Container(
+                  width: 165,
+                  alignment: Alignment.centerLeft,
+                  padding: const EdgeInsets.all(10.0),
                   child: Text('${indexAction + 1}/$totalQuestions: $question',
                   style: const TextStyle(
                     fontSize: 12.0,
@@ -42,7 +41,6 @@ class QuestionWidget extends StatelessWidget {
                     )
                   )  
                 ),
-              ),
             ],
             
           ),

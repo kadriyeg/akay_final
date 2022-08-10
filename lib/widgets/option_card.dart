@@ -14,20 +14,25 @@ class OptionCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(15),
+      ),
       color: color,
-      child: ListTile(
-        title: Text(
-          option,
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            fontSize: 22.0,
+      child: Padding(
+        padding: EdgeInsets.all(0),
+        child: ListTile(
+          title: Text(
+            option,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 18.0,
             //we will decide if the 'color' we are receiving here
             //what ratio of the 'red' and 'green' colors are in it
-            color: color.red != color.green ? Colors.white : Colors.black,
+              color: color.red != color.green ? Colors.white : Colors.black,
           ),
         ),
       ),
       
-    );
+    ),);
   }
 }
