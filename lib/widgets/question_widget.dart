@@ -21,6 +21,7 @@ class QuestionWidget extends StatelessWidget {
           children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Image.asset('images/oturan_akay.png'),
               InkWell(

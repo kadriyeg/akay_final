@@ -1,0 +1,170 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_application_1/models/questions_model.dart';
+import '../constants.dart';
+import '../widgets/question_widget.dart';
+import '../widgets/next_button.dart';
+import '../widgets/option_card.dart';
+import '../widgets/result_box.dart';
+
+class AlgoritmaQuestionsScreen extends StatefulWidget {
+  const AlgoritmaQuestionsScreen({ Key? key }) : super(key: key);
+
+  @override
+  State<AlgoritmaQuestionsScreen> createState() => _AlgoritmaQuestionsScreenState();
+}
+
+class _AlgoritmaQuestionsScreenState extends State<AlgoritmaQuestionsScreen> {
+  List<Question> _questions = [
+    Question(
+      id: '10',
+      title: 'Aşağıdakilerden hangisi iki sayının toplamını bulan algoritmanın adımlarından değildir?',
+      options: {'Başla': false, 'Sayıları topla': false,'Toplamı gir': true, 'Sayıları tanımla': false},
+    ),
+    Question(
+      id: '10',
+      title: 'Birden n’e kadar olan sayıların toplamlarını bulan algoritmayı ve akış şemasını hazırlarken şu adımlar verilmektedir:\n1-    Başla\n2-    n, i ve T değişkenleri tanımla\n3-    n sayısını gir, n=?\n4-    T ve i yi sıfırla\n5-    T=T+i, i=i+1\n6-    T’yi ekrana yaz\n7-    Eğer i<n ise 5. Adıma git\nBu adımlardan hangi ikisii yer değiştirilirse algoritma doğru bir şekilde çalışır?',
+      options: {'  2 ve 4': false, '2 ve 3': false, '4 ve 5': true, '6 ve 7': false},
+    ),
+    Question(
+      id: '10',
+      title: 'Algoritması verilen aşağıdaki adımların yaptığı iş hangi şıkta en iyi ifade edilmiştir?\n 1. Başla\n2. a, b değişkenlerini tanımla\n3. a sayısını gir\n4. b sayısını gir\n5. Eğer a>b ise “a, b den büyüktür” yaz\n6. Eğer a<b ise “b, a dan büyüktür” yaz\n7. Eğer a=b ise, “a ile b eşittir” yaz\n8. Dur.',
+      options: {'İki sayının hangisinin büyük olduğunu bulur ': false, 'İki sayıyı toplar': false, 'Birbirine eşit iki sayıyı bulur': true, 'Sayıların toplamını çıktı olarak verir': false},
+    ),
+    Question(
+      id: '10',
+      title: 'Bir iş yerindeki işçilerden yaşı 25’ ten büyük ve maaşı 5000’tlye eşit olanların listesini almak için hangi adım takip edilmemelidir?',
+      options: {'İ =1, n=1': false, 'Yaş bilgisi alınır': false, 'Yaş 25’Ten büyükse maaş 5000’e eşit mi kontrol edilir': true, '25 yaşından küçüklerin 5000 tl maaş alıp almadığı kontrol edilir.': false},
+    ),
+    Question(
+      id: '10',
+      title: 'What is 5 + 2 ?',
+      options: {'5': false, '30': false, '7': true, '10': false},
+    ),
+  ];
+  //create an index to loop through _questions
+  int index = 0;
+  //create a score variable
+  int score = 0;
+  //create a boolean value to check if the user has clicked
+  bool isPressed = false;
+
+  //a function to display the next question
+  bool isAlreadySelected = false;
+
+  void nextQuestion(){
+    if(index== _questions.length-1){
+      //this is the block where questions end
+      showDialog(
+        context: context,
+        barrierDismissible: false, //this will disable the dismiss function on clicking outside of box
+        builder: (ctx) => ResultBox(
+              result: score, //total points the user got
+              questionLength: _questions.length, //out of how many questions
+              onPressed: startOver,
+      ));
+    }else{
+      if(isPressed){
+        setState(() {
+          index++;
+          isPressed = false;
+          isAlreadySelected= false;
+        });
+      }else{
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text('Lütfen sorularını tamamla :)'),
+            behavior: SnackBarBehavior.floating,
+            margin: EdgeInsets.symmetric(vertical: 25.0),
+          ),
+        );
+      }
+    }
+  }
+  //create a function for changing color
+  void checkAnswerAndUpdate(bool value){
+    if(isAlreadySelected){
+      return;
+    }else{
+      if(value == true){
+        score++;
+      }
+      setState(() {
+        isPressed = true;
+        isAlreadySelected= true;
+      });
+    }
+  } 
+
+//creating a function to start over as we said in result box, gesture detector
+  void startOver(){
+    setState(() {
+      index= 0;
+      score=0;
+      isPressed= false;
+      isAlreadySelected=false;
+
+    });
+    Navigator.pop(context);
+  }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("ALGORİTMAYA GİRİŞ"), 
+        backgroundColor: backGroundColor,
+        shadowColor: backGroundColor,
+        //adding score to show in the app
+        actions:[
+          Padding(
+            padding:const EdgeInsets.all(18.0), 
+            child: Text( 'Skor: $score',
+              style:const TextStyle(fontSize:18.0),
+            ),
+          ),
+        ]
+      ),
+      body: Container(
+        color: backGroundColor,
+        width: double.infinity,
+        padding: const EdgeInsets.symmetric(horizontal: 50.0),
+        child: Column(
+          children: [
+            QuestionWidget(
+              indexAction: index,
+              question: _questions[index].title,
+              totalQuestions: _questions.length,
+            ),
+            const Divider(color: neutral,),
+            //add some space
+            const SizedBox(
+              height: 25.0,),
+              for (int i=0; i< _questions[index].options.length; i++)
+                GestureDetector(
+                  onTap: () => checkAnswerAndUpdate(
+                     _questions[index].options.values.toList()[i]),
+                    //create function to check the answer, modify the changeColor function
+                  child: OptionCard(
+                    option: _questions[index].options.keys.toList()[i],
+                    //we need to check if the answer is correct
+                
+                    color: isPressed
+                    ? _questions[index].options.values.toList()[i]== true //we need this value to see if the answer is correct
+                      ? correct
+                      : incorrect
+                    : buttonColor,
+                    ),
+                )
+               
+          ],
+        ),
+      ),
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 15.0),
+        child: NextButton(
+          nextQuestion: nextQuestion, //the above function
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+    );
+  }
+}

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_application_1/screens/algoritmaquestions_screen';
 import '../../constants.dart';
 import '../python_courses.dart';
 
@@ -99,7 +99,7 @@ class Agiris extends StatelessWidget {
                         Navigator.of(context).push(
                           MaterialPageRoute(
                             builder: (BuildContext context) {
-                              return PythonCourses();
+                              return  AlgoritmaQuestionsScreen();
                             },
                           ),
                         );
