@@ -112,7 +112,7 @@ class AlgoritmaPage extends StatelessWidget {
                             ]
                           ),
                         child: ListTile(
-            title: Text('Karakter dizileri',
+            title: Text('Problem Çözme Süreci',
           style: TextStyle(fontSize: 20, color: Colors.white),),
             trailing: Icon(Icons.lock, color: Colors.white,),
 
@@ -139,7 +139,7 @@ class AlgoritmaPage extends StatelessWidget {
                             ]
                           ),
                         child: ListTile(
-            title: Text('Listeler, Tuple',
+            title: Text('Problem Çözme Yaklaşımları',
           style: TextStyle(fontSize: 20, color: Colors.white),),
             trailing: Icon(Icons.lock, color: Colors.white,),
 
@@ -165,7 +165,7 @@ class AlgoritmaPage extends StatelessWidget {
                             ]
                           ),
                         child: ListTile(
-            title: Text('Dictionary',
+            title: Text('Programlama Yapısı',
           style: TextStyle(fontSize: 20, color: Colors.white),),
             trailing: Icon(Icons.lock, color: Colors.white,),
 
@@ -191,7 +191,7 @@ class AlgoritmaPage extends StatelessWidget {
                             ]
                           ),
                         child: ListTile(
-            title: Text('Sets',
+            title: Text('Doğrusal Mantık Yapısı ile Problem Çözme',
           style: TextStyle(fontSize: 20, color: Colors.white),),
             trailing: Icon(Icons.lock, color: Colors.white,),
 
@@ -217,7 +217,7 @@ class AlgoritmaPage extends StatelessWidget {
                             ]
                           ),
                         child: ListTile(
-            title: Text('Pythonda Operatörler',
+            title: Text('Karar Mantık Yapısı İle Problem Çözme',
           style: TextStyle(fontSize: 20, color: Colors.white),),
             trailing: Icon(Icons.lock, color: Colors.white,),
 
@@ -243,14 +243,14 @@ class AlgoritmaPage extends StatelessWidget {
                             ]
                           ),
                         child: ListTile(
-            title: Text('Pythonda Koşul İfadeleri',
+            title: Text('Döngü Yapısı İle Problem Çözme',
           style: TextStyle(fontSize: 20, color: Colors.white),),
             trailing: Icon(Icons.lock, color: Colors.white,),
 
           ),
                       ),
                     ),
-                    Padding(
+                    /*Padding(
                       padding: const EdgeInsets.only(top: 15.0, left: 10.0, right: 10.0),
                       child: Container(width: double.infinity,
                           height: 50,
@@ -275,7 +275,7 @@ class AlgoritmaPage extends StatelessWidget {
           ),
                       ),
                     ),
-
+*/
         ],
       )
       ),
