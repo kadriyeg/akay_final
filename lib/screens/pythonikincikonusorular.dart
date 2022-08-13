@@ -20,7 +20,7 @@ class _PythonIkiSoruState extends State<PythonIkiSoru> {
     Question(
       id: '10',
       title: 'Integer nedir?',
-      options: { 'Tam sayı anlamına gelen, tam sayı değerlerini atayabilen bir veri türüdür.': true,'Karakter dizisidir': true, 'Ondalıklı sayıları atayabileceğimiz bir veri türüdür.': false, 'Liste oluşturmamızı sağlar.': false},
+      options: { 'Tam sayı anlamına gelen, tam sayı değerlerini atayabilen bir veri türüdür.': true,'Karakter dizisidir': false, 'Ondalıklı sayıları atayabileceğimiz bir veri türüdür.': false, 'Liste oluşturmamızı sağlar.': false},
     ),
     Question(
       id: '10',
