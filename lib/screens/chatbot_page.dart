@@ -59,6 +59,7 @@ List<Map> messsages = [];
                 children: <Widget>[
                   Flexible(
                       child: TextField(
+                        style: TextStyle(color: Colors.white),
                     controller: messageInsert,
                     decoration: InputDecoration.collapsed(
                         hintText: "Mesajınızı yazınız",
