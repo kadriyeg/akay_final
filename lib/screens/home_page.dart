@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/screens/algoritmakonular/a_algoritmayagiris.dart';
 import 'package:flutter_application_1/screens/python_courses.dart';
+import 'package:flutter_application_1/screens/pythonkonular/p_degiskenler.dart';
 import 'algoritma_page.dart';
 import '../constants.dart';
 import 'package:flutter_application_1/main.dart';
@@ -147,23 +149,33 @@ class FirstPage extends StatelessWidget {
                 ),
               ),
               // KALDIĞIN YERDEN DEVAM ET ROWU
-              Container(
-                height: 100,
-                width:250,
-                decoration: BoxDecoration(
-                   image: DecorationImage(image: AssetImage('images/kaldigin_yer.png')),
-                  color: buttonColor,
-                  borderRadius: BorderRadius.all(Radius.circular(15)),
+              InkWell(
+                child: Container(
+                  height: 100,
+                  width:250,
+                  decoration: BoxDecoration(
+                     image: DecorationImage(image: AssetImage('images/kaldigin_yer.png')),
+                    color: buttonColor,
+                    borderRadius: BorderRadius.all(Radius.circular(15)),
+                  ),
+                   child: Padding(
+                     padding: const EdgeInsets.all(8.0),
+                     child: Text(
+                              'Kaldığın Yerden Devam Et',
+                              style: TextStyle(fontSize: 18, color: Colors.white),
+                              textAlign: TextAlign.center ,
+                            ),
+                   ),
                 ),
-                 child: Padding(
-                   padding: const EdgeInsets.all(8.0),
-                   child: Text(
-                            'Kaldığın Yerden Devam Et',
-                            style: TextStyle(fontSize: 18, color: Colors.white),
-                            textAlign: TextAlign.center ,
+                  onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (BuildContext context) {
+                              return Pdegiskenler();
+                            },
                           ),
-                 ),
-                
+                        );
+                      },
               ),
             ],
           ),
